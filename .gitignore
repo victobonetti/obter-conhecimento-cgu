@@ -1,0 +1,15 @@
+# ⚠️ Segredos ficam fora do git (regra do projeto). Versione só o .env.example.
+.env
+
+# Backend (Maven)
+backend/target/
+
+# Frontend (Vite)
+frontend/node_modules/
+frontend/dist/
+
+# IDE / SO
+.idea/
+.vscode/
+*.iml
+.DS_Store
