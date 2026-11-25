@@ -240,7 +240,7 @@ Legenda: `[ ]` a fazer · `[x]` feito · 🐞 bug didático (provoque, observe, 
 
 **Núcleo**
 - [ ] Repositório git + `.gitignore` (inclua `.env` desde já) + primeiro commit.
-- [ ] `docker-compose.yml` com PostgreSQL (`pgvector/pgvector:pg16`, já pensando no M7).
+- [x] `docker-compose.yml` com PostgreSQL (`pgvector/pgvector:pg16`, já pensando no M7).
 - [ ] Projeto em start.spring.io:
   - Dependências: Java 21, Maven, Web, Data JPA, Validation, PostgreSQL Driver, Flyway, Actuator.
   - Sem Security por enquanto. ⚠️ Se você adicionar, todos os endpoints passam a exigir login automaticamente. Pergunte ao tutor por quê: é autoconfiguração.

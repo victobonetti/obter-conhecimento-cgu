@@ -41,12 +41,15 @@ services:
       - "8080:8080"
     environment:
       # 🧩 COMPLETE: host e porta do banco VISTOS DE DENTRO da network do compose.
-      SPRING_DATASOURCE_URL: jdbc:postgresql://???:???/${POSTGRES_DB}
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/${POSTGRES_DB}
       SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER}
       SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD}
     # 🧩 COMPLETE: depends_on que espere o Postgres ficar HEALTHY, não só "started".
     # ❓ PREVISÃO: com um depends_on simples (lista com o nome do serviço), o que o
     #    Flyway faz se o Spring subir antes de o Postgres aceitar conexões?
+    depends_on: 
+      postgres:
+        condition: service_healthy
 
 volumes:
   pgdata:
